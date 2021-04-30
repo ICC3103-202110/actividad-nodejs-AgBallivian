@@ -13,5 +13,14 @@ function fibonacci(n){
     return a;
 }
 
-console.log(fibonacci(9));
+const readline = require('readline').createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+readline.question('Ingresa un número: ', n => {
+    console.log(`F( ${n} ) = ${fibonacci(n)}`);
+    readline.close();
+});
+
+//console.log(fibonacci(9));
 
